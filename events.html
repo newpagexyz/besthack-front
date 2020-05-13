@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Мероприятия</title>
+    <link rel='stylesheet' type='text/css' href='style/header.css'>
+    <link rel='stylesheet' type='text/css' href='style/index.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='core/main.css' rel='stylesheet' />
+    <link href='daygrid/main.css' rel='stylesheet' />
+
+    <script src='core/main.js'></script>
+    <script src='daygrid/main.js'></script>
+
+    <link rel="stylesheet" type="text/css" href="glider.css">
+    <script src="glider.js"></script>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                plugins: [ 'dayGrid' ],
+                height: "auto"
+            });
+
+            calendar.render();
+        });
+
+    </script>
+</head>
+<body class="has-navbar-fixed-top">
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="besthack.newpage.xyz">
+            <img src="https://static.tildacdn.com/tild6466-6365-4164-b137-336431383231/noroot.png" width="128"
+                 height="128">
+        </a>
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+           data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link is-arrowless is-arrowless">
+                    Мероприятия
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a class="navbar-item">
+                        Мероприятия раз
+                    </a>
+                    <a class="navbar-item">
+                        Мероприятия два
+                    </a>
+                    <a class="navbar-item">
+                        Мероприятия три
+                    </a>
+                </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link is-arrowless">
+                    Участникам
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a class="navbar-item">
+                        Участникам раз
+                    </a>
+                    <a class="navbar-item">
+                        Участникам два
+                    </a>
+                    <a class="navbar-item">
+                        Участникам три
+                    </a>
+                    <a class="navbar-item">
+                        участникам четыре
+                    </a>
+                </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link is-arrowless">
+                    Партнерам
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a class="navbar-item">
+                        Партнерам раз
+                    </a>
+                    <a class="navbar-item">
+                        два
+                    </a>
+                    <a class="navbar-item">
+                        три
+                    </a>
+                </div>
+            </div>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link is-arrowless">
+                    О нас
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a class="navbar-item">
+                        О нас раз
+                    </a>
+                    <a class="navbar-item">
+                        О нас два
+                    </a>
+                    <a class="navbar-item">
+                        О нас три
+                    </a>
+                </div>
+            </div>
+            <a class="navbar-item">
+                Контакты
+            </a>
+        </div>
+
+        <div class="navbar-end">
+            <a class="navbar-item">
+                Личный кабинет
+            </a>
+            <div class="navbar-item">
+                <figure class="image is-64x64">
+                    <img src="user.jpg" class="is-rounded">
+                </figure>
+
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section class="hero is-info">
+    <div class="hero-body">
+        <div class="container">
+        </div>
+    </div>
+</section>
+<section class="columns" style="text-align: center; padding-top: 5%">
+    <div class="column">
+        <h1 class="title">Наши мероприятия</h1>
+        Дальнейшее развитие различных форм деятельности является качественно новой ступенью инновационных методов управления процессами. Действия представителей оппозиции представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть призваны к ответу. Но базовые сценарии поведения пользователей, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут обнародованы.
+    </div>
+    <div class="column">
+        <div id='calendar'></div>
+    </div>
+</section>
+<h1 class="title" style="text-align: center">Собрания</h1>
+<section class="section">
+    <div class="glider-contain">
+        <div class="glider">
+            <div class="columns">
+                <div class="column">
+                    <img src="user.jpg">
+                </div>
+                <div class="column">
+                    КОТИКИ
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <img src="user.jpg">
+                </div>
+                <div class="column">
+                    КОТИКИ
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <img src="user.jpg">
+                </div>
+                <div class="column">
+                    КОТИКИ
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <img src="user.jpg">
+                </div>
+                <div class="column">
+                    КОТИКИ
+                </div>
+            </div>
+        </div>
+
+        <button aria-label="Previous" class="glider-prev">«</button>
+        <button aria-label="Next" class="glider-next">»</button>
+        <div role="tablist" class="dots"></div>
+    </div>
+</section>
+<h1 class="title" style="text-align: center">Мастер-классы</h1>
+<div class="glider-contain">
+    <div class="glider2">
+        <div class="columns">
+            <div class="column">
+                <img src="user.jpg">
+            </div>
+            <div class="column">
+                КОТИКИ
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column">
+                <img src="user.jpg">
+            </div>
+            <div class="column">
+                КОТИКИ
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column">
+                <img src="user.jpg">
+            </div>
+            <div class="column">
+                КОТИКИ
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column">
+                <img src="user.jpg">
+            </div>
+            <div class="column">
+                КОТИКИ
+            </div>
+        </div>
+    </div>
+
+    <button aria-label="Previous" class="glider-prev2">«</button>
+    <button aria-label="Next" class="glider-next2">»</button>
+    <div role="tablist" class="dots2"></div>
+</div>
+<script>
+    window.addEventListener('load', function () {
+        new Glider(document.querySelector('.glider'), {
+            slidesToShow: 2,
+            draggable: true,
+            dots: "#dots",
+            arrows: {
+                prev: ".glider-prev",
+                next: ".glider-next"
+            }
+        });
+        new Glider(document.querySelector('.glider2'), {
+            slidesToShow: 2,
+            draggable: true,
+            dots: "#dots2",
+            arrows: {
+                prev: ".glider-prev2",
+                next: ".glider-next2"
+            }
+        })
+    })
+</script>
+</body>
+</html>

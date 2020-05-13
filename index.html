@@ -9,15 +9,19 @@
     <link rel='stylesheet' type='text/css' href='style/index.css'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="glider.css">
+    <script src="glider.js"></script>
 </head>
 <body class="has-navbar-fixed-top">
 <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-item" href="besthack.newpage.xyz">
-            <img src="https://static.tildacdn.com/tild6466-6365-4164-b137-336431383231/noroot.png" width="128" height="128">
+            <img src="https://static.tildacdn.com/tild6466-6365-4164-b137-336431383231/noroot.png" width="128"
+                 height="128">
         </a>
 
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+           data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -110,7 +114,7 @@
             </a>
             <div class="navbar-item">
                 <figure class="image is-64x64">
-                <img src="user.jpg" class="is-rounded">
+                    <img src="user.jpg" class="is-rounded">
                 </figure>
 
             </div>
@@ -122,21 +126,111 @@
         <div class="container" style="text-align: center">
             <h2 class="title">Приветствуем вас, Бла-Бла</h2>
             <h3 class="subtitle">
-                Вот вам яркий пример современных тенденций - существующая теория обеспечивает актуальность системы массового участия. В частности, сложившаяся структура организации выявляет срочную потребность экономической целесообразности принимаемых решений. Ясность нашей позиции очевидна: начало повседневной работы по формированию позиции требует от нас анализа прогресса профессионального сообщества.
+                Вот вам яркий пример современных тенденций - существующая теория обеспечивает актуальность системы
+                массового участия. В частности, сложившаяся структура организации выявляет срочную потребность
+                экономической целесообразности принимаемых решений. Ясность нашей позиции очевидна: начало повседневной
+                работы по формированию позиции требует от нас анализа прогресса профессионального сообщества.
                 <div class="container" style="padding-top: 2%">
-                <button class="button is-link is-rounded">О программе</button>
-                <button class="button is-link is-rounded">чото Другое</button>
+                    <button class="button is-link is-rounded">О программе</button>
+                    <button class="button is-link is-rounded">чото Другое</button>
                 </div>
             </h3>
         </div>
     </div>
 </section>
+<section class="hero is-medium" style="background-color: #82e3e2">
+    <div class="hero-head" style="padding-top: 1%">
+        <h1 class="title" style="text-align: center; color: white">
+            BEST IN NUMBERS
+        </h1>
+    </div>
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column" style="text-align: center; color: white">
+                    <p class="title" style="color: white">
+                        93
+                    </p><br> local groups
 
+                </div>
+                <div class="column" style="text-align: center; color: white">
+                    <p class="title" style="color: white">
+                        34
+                    </p><br> countries
+                </div>
+                <div class="column" style="text-align: center; color: white">
+                    <p class="title" style="color: white">
+                        3300
+                    </p><br> members
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="hero is-medium">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                Courses
+            </h1>
+            <h2 class="subtitle">
+                Есть над чем задуматься: парад бытовой техники оказался началом великой войны
+            </h2>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="glider-contain">
+        <div class="glider">
+            <div class="columns">
+                <div class="column">
+                    <img src="user.jpg">
+                </div>
+                <div class="column">
+                    КОТИКИ
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <img src="user.jpg">
+                </div>
+                <div class="column">
+                    КОТИКИ
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <img src="user.jpg">
+                </div>
+                <div class="column">
+                    КОТИКИ
+                </div>
+            </div>
 
-            <footer>
-                <hr>
-                <p>Developed by &#171;NewPage1	&#187; &copy;2020</p>
-            </footer>
+        </div>
+
+        <button aria-label="Previous" class="glider-prev">«</button>
+        <button aria-label="Next" class="glider-next">»</button>
+        <div role="tablist" class="dots"></div>
+    </div>
+</div>
+<footer>
+    <hr>
+    <p>Developed by &#171;NewPage1 &#187; &copy;2020</p>
+</footer>
+<script>
+    window.addEventListener('load', function () {
+        new Glider(document.querySelector('.glider'), {
+            slidesToShow: 2,
+            draggable: true,
+            dots: "#dots",
+            arrows: {
+                prev: ".glider-prev",
+                next: ".glider-next"
+            }
+        })
+    })
+</script>
 </body>
 
 </html>

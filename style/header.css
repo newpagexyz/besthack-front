@@ -1,0 +1,24 @@
+header ul{
+    list-style-type:none;
+}
+header ul li{
+
+    float:right;
+    margin-right:5%;
+
+}
+header{
+    z-index:999;
+    margin:10px auto 0 0;
+    position: sticky;
+    padding:2%;
+    top:0px;
+    background:#FFFFFF;
+    min-height:5vh;
+
+}
+header img{
+    position: flex;
+    right: 200%;
+    /*margin: 10px 0% 10px 32%;*/
+}

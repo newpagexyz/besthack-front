@@ -14,6 +14,34 @@
     <script src="glider.js"></script>
 </head>
 
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+
+            // Add a click event on each of them
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+
+                });
+            });
+        }
+
+    });
+</script>
+
 <body class="has-navbar-fixed-top">
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
@@ -191,10 +219,10 @@
             </div>
         </div>
     </section>
-    <div class="hero is-fullheight-with-navbar">
+    <div class="hero is-fullheight-with-navbar" style="margin-top:-70px;">
         <div class="hero-body">
             <div class="glider-contain" style="text-align: center;">
-                <h1 class="title"> Наши новости </h1>
+                <h1 class="title" style="padding-bottom:20px;"> Наши новости </h1>
                 <div class="glider">
                     <div class="columns">
                         <div class="column">
@@ -222,9 +250,10 @@
                     </div>
 
                 </div>
-
                 <button aria-label="Previous" class="glider-prev">«</button>
                 <button aria-label="Next" class="glider-next">»</button>
+
+
                 <div role="tablist" class="dots"></div>
             </div>
         </div>
@@ -232,7 +261,7 @@
 
 
     <div class="section" style="text-align: center;">
-        <h1 class="title"> Наше обучение </h1>
+        <h1 class="title" style="padding-bottom:20px;"> Наше обучение </h1>
         <div class="columns">
             <div class="column">
                 <img src="user.jpg"><br>

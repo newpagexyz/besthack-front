@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>
+        BEST_HACK
+    </title>
+    <link rel='stylesheet' type='text/css' href='style/header.css'>
+    <link rel='stylesheet' type='text/css' href='style/index.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="glider.css">
+    <script src="glider.js"></script>
+</head>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+
+            // Add a click event on each of them
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+
+                });
+            });
+        }
+
+    });
+</script>
+
+<body class="has-navbar-fixed-top">
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="besthack.newpage.xyz">
+                <img src="https://static.tildacdn.com/tild6466-6365-4164-b137-336431383231/noroot.png" width="128" height="128">
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link is-arrowless is-arrowless">
+                    Мероприятия
+                </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                        Мероприятия раз
+                    </a>
+                        <a class="navbar-item">
+                        Мероприятия два
+                    </a>
+                        <a class="navbar-item">
+                        Мероприятия три
+                    </a>
+                    </div>
+                </div>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link is-arrowless">
+                    Участникам
+                </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                        Участникам раз
+                    </a>
+                        <a class="navbar-item">
+                        Участникам два
+                    </a>
+                        <a class="navbar-item">
+                        Участникам три
+                    </a>
+                        <a class="navbar-item">
+                        участникам четыре
+                    </a>
+                    </div>
+                </div>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link is-arrowless">
+                    Партнерам
+                </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                        Партнерам раз
+                    </a>
+                        <a class="navbar-item">
+                        два
+                    </a>
+                        <a class="navbar-item">
+                        три
+                    </a>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link is-arrowless">
+                    О нас
+                </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                        О нас раз
+                    </a>
+                        <a class="navbar-item">
+                        О нас два
+                    </a>
+                        <a class="navbar-item">
+                        О нас три
+                    </a>
+                    </div>
+                </div>
+                <a class="navbar-item">
+                Контакты
+            </a>
+            </div>
+
+            <div class="navbar-end">
+                <a class="navbar-item">
+                Личный кабинет
+            </a>
+                <a class="navbar-item">
+                    <figure class="image is-64x64">
+                        <img src="user.jpg" class="is-rounded">
+                    </figure>
+
+                </a>
+            </div>
+        </div>
+    </nav>
+    <section class="hero is-info">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-size-1">Создание мероприятия</h1>
+            </div>
+        </div>
+    </section>
+
+    <div class="hero is-small" style="padding: 0 10%;">
+        <div class="hero-body">
+            <div class="glider-contain" style="text-align: center;">
+                <div class="glider">
+                    <div class="slid">
+
+                        <img src="user.jpg">
+                        <input class="file-input" type="file" name="resume">
+                    </div>
+                    <div class="slid">
+                        <img src="user.jpg">
+                        <input class="file-input" type="file" name="resume">
+                    </div>
+                    <div class="slid">
+                        <img src="user.jpg">
+                        <input class="file-input" type="file" name="resume">
+                    </div>
+                </div>
+                <style type="text/css">
+                    .slid {
+                        border-left: 2px solid #ccc;
+                        /* Параметры линии */
+                        margin-left: 20px;
+                        /* Отступ слева */
+                        padding-left: 10px;
+                        /* Расстояние от линии до текста */
+                        border-right: 2px solid #ccc;
+                        /* Параметры линии */
+                        margin-right: 20px;
+                        /* Отступ слева */
+                        padding-right: 10px;
+                    }
+                    
+                    .label {
+                        margin-top: 5px;
+                    }
+                </style>
+                <button aria-label="Previous" class="glider-prev">«</button>
+                <button aria-label="Next" class="glider-next">»</button>
+
+
+                <div role="tablist" class="dots"></div>
+            </div>
+        </div>
+    </div>
+
+    <section class="container" style="padding: 0 10%;">
+        <div class="columns is-gapless is-multiline is-mobile">
+
+            <div class="column is-narrow">
+                <label class="label">Название:&nbsp;</label>
+            </div>
+            <div class="column is-auto">
+                <input class="input" type="text" placeholder="Название мерроприятия">
+            </div>
+        </div>
+        <div class="columns is-gapless is-multiline is-mobile">
+
+            <div class="column is-auto">
+                <label class="label has-text-left">Даты проведения:</label>
+            </div>
+            <div class="column is-auto">
+                <label class="label has-text-left">Время проведения:</label>
+            </div>
+        </div>
+        <div class="columns is-gapless is-multiline is-mobile ">
+            <div class="column is-auto">
+                <div class="columns is-gapless is-multiline is-mobile">
+                    <div class="column is-auto">
+                        <div class="columns is-gapless  ">
+                            <div class="column is-auto">
+                                <label class="label">Начало:</label>
+                            </div>
+                            <div class="column is-auto">
+                                <button class="button is-link is-rounded">Выбрать</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-auto">
+                        <div class="columns is-gapless  ">
+                            <div class="column is-auto">
+                                <label class="label">Окончание:</label>
+                            </div>
+                            <div class="column is-auto">
+                                <button class="button is-link is-rounded">Выбрать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-auto">
+                <div class="columns is-gapless is-multiline is-mobile">
+                    <div class="column is-auto">
+                        <div class="columns is-gapless  ">
+                            <div class="column is-auto">
+                                <label class="label">Начало:</label>
+                            </div>
+                            <div class="column is-auto">
+                                <button class="button is-link is-rounded">Выбрать</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-auto">
+                        <div class="columns is-gapless">
+                            <div class="column is-auto">
+                                <label class="label">Окончание:</label>
+                            </div>
+                            <div class="column is-auto">
+                                <button class="button is-link is-rounded">Выбрать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <div class="columns is-gapless is-multiline is-mobile">
+            <div class="column is-narrow">
+                <label class="label">Тема:&nbsp;</label>
+            </div>
+            <div class="column is-auto">
+                <div class="control is-fullwidth">
+                    <div class="select is-fullwidth">
+                        <select>
+                        <option>Пашел</option>
+                        <option>На*ой</option>
+                      </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columns is-gapless is-multiline is-mobile">
+            <div class="column is-narrow">
+                <label class="label">О мероприятии:&nbsp;</label>
+            </div>
+
+        </div>
+        <div class="field-body">
+            <div class="field">
+                <div class="control">
+                    <textarea class="textarea" placeholder="Расскажите о вашем мероприятии"></textarea>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+    <script>
+        window.addEventListener('load', function() {
+            new Glider(document.querySelector('.glider'), {
+                slidesToShow: 1,
+
+                draggable: true,
+                dots: ".dots ",
+                arrows: {
+                    prev: ".glider-prev ",
+                    next: ".glider-next "
+                }
+            })
+        })
+    </script>
+    <footer>
+        <hr>
+        <p>Developed by &#171;NewPage1 &#187; &copy;2020</p>
+    </footer>
+
+
+</body>
+
+</html>

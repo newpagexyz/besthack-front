@@ -9,7 +9,7 @@
 }
 
 .fc-dayGrid-view .fc-body .fc-row {
-  min-height: 4em;
+  min-height: 2em;
   /* ensure that all rows are at least this tall */
 }
 
@@ -32,12 +32,12 @@
 
 .fc-dayGrid-view .fc-week-number,
 .fc-dayGrid-view .fc-day-number {
-  padding: 2px;
+  padding: 1px;
 }
 
 .fc-dayGrid-view th.fc-week-number,
 .fc-dayGrid-view th.fc-day-number {
-  padding: 0 2px;
+  padding: 0 1px;
   /* column headers can't have as much v space */
 }
 
@@ -51,16 +51,16 @@
 
 .fc-ltr .fc-dayGrid-view .fc-day-top .fc-week-number {
   float: left;
-  border-radius: 0 0 3px 0;
+  border-radius: 0 0 2px 0;
 }
 
 .fc-rtl .fc-dayGrid-view .fc-day-top .fc-week-number {
   float: right;
-  border-radius: 0 0 0 3px;
+  border-radius: 0 0 0 2px;
 }
 
 .fc-dayGrid-view .fc-day-top .fc-week-number {
-  min-width: 1.5em;
+  min-width: 1em;
   text-align: center;
   background-color: #f2f2f2;
   color: #808080;

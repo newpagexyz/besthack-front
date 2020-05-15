@@ -7,24 +7,47 @@
     <link rel='stylesheet' type='text/css' href='style/index.css'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='core/main.css' rel='stylesheet' />
-    <link href='daygrid/main.css' rel='stylesheet' />
+    <link href='core/main.css' rel='stylesheet'/>
+    <link href='daygrid/main.css' rel='stylesheet'/>
 
     <script src='core/main.js'></script>
     <script src='daygrid/main.js'></script>
+    <script src='core/locales/ru.js'></script>
 
     <link rel="stylesheet" type="text/css" href="glider.css">
     <script src="glider.js"></script>
 
     <script>
 
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             var calendarEl = document.getElementById('calendar');
 
             var calendar = new FullCalendar.Calendar(calendarEl, {
-                plugins: [ 'dayGrid' ],
-                height: "auto"
+                plugins: ['dayGrid'],
+                height: 'auto',
+                locale: 'ru',
+                eventClick(arg) {
+                    document.getElementById("event-description").innerText = arg.event.extendedProps.description;
+                    document.getElementById("img_event").src = arg.event.extendedProps.img_src;
+                    return;
+                }
             });
+
+            fetch('http://127.0.0.1:8080')
+                .then(response => response.json())
+                .then(json => {
+                    json.forEach(el => {
+                      var event = {
+                          title: 'event',
+                          description: el['text'],
+                          start: el['start'],
+                          end: el['end'],
+                          img_src: el['image']
+                      };
+                      calendar.addEvent(event);
+                      console.log('check');
+                    })
+                });
 
             calendar.render();
         });
@@ -147,12 +170,22 @@
         </div>
     </div>
 </section>
-<section class="columns" style="text-align: center; padding-top: 5%">
+<section class="columns" style="text-align: center; padding-top: 3%;">
     <div class="column">
         <h1 class="title">Наши мероприятия</h1>
-        Дальнейшее развитие различных форм деятельности является качественно новой ступенью инновационных методов управления процессами. Действия представителей оппозиции представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть призваны к ответу. Но базовые сценарии поведения пользователей, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут обнародованы.
+        Дальнейшее развитие различных форм деятельности является качественно новой ступенью инновационных методов
+        управления процессами. Действия представителей оппозиции представляют собой не что иное, как квинтэссенцию
+        победы маркетинга над разумом и должны быть призваны к ответу.
+        <hr>
+        <div class="columns">
+            <div class="column">
+                <img src="" id="img_event" style="padding-left: 10%;">
+            </div>
+            <div class="column" id="event-description">
+            </div>
+        </div>
     </div>
-    <div class="column">
+    <div class="column is-one-third">
         <div id='calendar'></div>
     </div>
 </section>
@@ -242,7 +275,7 @@
 </div>
 <script>
     window.addEventListener('load', function () {
-        new Glider(document.querySelector('.glider'), {
+                new Glider(document.querySelector('.glider'), {
             slidesToShow: 2,
             draggable: true,
             dots: "#dots",

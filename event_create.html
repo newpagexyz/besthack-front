@@ -151,82 +151,168 @@
     </nav>
     <section class="hero is-info">
         <div class="hero-body">
-            <div class="container">
+            <div class="container has-text-centered">
+                <h1 class="title is-size-1">Создание мероприятия</h1>
             </div>
         </div>
     </section>
-    <section class="container" style="padding-top: 2%;">
-        <div class="columns">
-            <div class="column" style="padding-left: 10%">
-                <div class="glider-contain" style="text-align: center;">
-                    <h1 class="title" style="padding-bottom:20px;"> Наши новости </h1>
-                    <div class="glider">
-                        <div class="columns">
-                            <div class="column">
-                                <img src="user.jpg">
-                            </div>
-                            <div class="column">
-                                КОТИКИ
-                            </div>
-                        </div>
-                        <div class="columns">
-                            <div class="column">
-                                <img src="user.jpg">
-                            </div>
-                            <div class="column">
-                                КОТИКИ
-                            </div>
-                        </div>
-                        <div class="columns">
-                            <div class="column">
-                                <img src="user.jpg">
-                            </div>
-                            <div class="column">
-                                КОТИКИ
-                            </div>
-                        </div>
 
+    <div class="hero is-small" style="padding: 0 10%;">
+        <div class="hero-body">
+            <div class="glider-contain" style="text-align: center;">
+                <div class="glider">
+                    <div class="slid">
+
+                        <img src="user.jpg">
+                        <input class="file-input" type="file" name="resume">
                     </div>
-                    <button aria-label="Previous" class="glider-prev">«</button>
-                    <button aria-label="Next" class="glider-next">»</button>
-
-
-                    <div role="tablist" class="dots"></div>
-                </div>
-                <input class="file-input" type="file" name="resume">
-            </div>
-            <div class="column" style="text-align: center">
-                <p class="title">Ваш профиль</p>
-                <div class="columns">
-                    <div class="column">
-                        <p>Статус</p>
-                        <p>Имя</p>
-                        <p>Фамилия</p>
-                        <p>Отчество</p>
-                        <p>Место учебы</p>
-                        <p>Место работы</p>
+                    <div class="slid">
+                        <img src="user.jpg">
+                        <input class="file-input" type="file" name="resume">
                     </div>
-                    <div class="column">
-                        <p>Учащийся</p>
-                        <!-- php -->
-                        <p>Иванов</p>
-                        <p>Иван</p>
-                        <p>Иванович</p>
-                        <p>СПБСТУ ИМЕНИ ДЕМИДОВИЧА</p>
-                        <p>ГАзПРОм</p>
+                    <div class="slid">
+                        <img src="user.jpg">
+                        <input class="file-input" type="file" name="resume">
                     </div>
                 </div>
+                <style type="text/css">
+                    .slid {
+                        border-left: 2px solid #ccc;
+                        /* Параметры линии */
+                        margin-left: 20px;
+                        /* Отступ слева */
+                        padding-left: 10px;
+                        /* Расстояние от линии до текста */
+                        border-right: 2px solid #ccc;
+                        /* Параметры линии */
+                        margin-right: 20px;
+                        /* Отступ слева */
+                        padding-right: 10px;
+                    }
+                    
+                    .label {
+                        margin-top: 5px;
+                    }
+                </style>
+                <button aria-label="Previous" class="glider-prev">«</button>
+                <button aria-label="Next" class="glider-next">»</button>
+
+
+                <div role="tablist" class="dots"></div>
             </div>
-            <div class="column"></div>
+        </div>
+    </div>
+
+    <section class="container" style="padding: 0 10%;">
+        <div class="columns is-gapless is-multiline is-mobile">
+
+            <div class="column is-narrow">
+                <label class="label">Название:&nbsp;</label>
+            </div>
+            <div class="column is-auto">
+                <input class="input" type="text" placeholder="Название мерроприятия">
+            </div>
+        </div>
+        <div class="columns is-gapless is-multiline is-mobile">
+
+            <div class="column is-auto">
+                <label class="label has-text-left">Даты проведения:</label>
+            </div>
+            <div class="column is-auto">
+                <label class="label has-text-left">Время проведения:</label>
+            </div>
+        </div>
+        <div class="columns is-gapless is-multiline is-mobile ">
+            <div class="column is-auto">
+                <div class="columns is-gapless is-multiline is-mobile">
+                    <div class="column is-auto">
+                        <div class="columns is-gapless  ">
+                            <div class="column is-auto">
+                                <label class="label">Начало:</label>
+                            </div>
+                            <div class="column is-auto">
+                                <button class="button is-link is-rounded">Выбрать</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-auto">
+                        <div class="columns is-gapless  ">
+                            <div class="column is-auto">
+                                <label class="label">Окончание:</label>
+                            </div>
+                            <div class="column is-auto">
+                                <button class="button is-link is-rounded">Выбрать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-auto">
+                <div class="columns is-gapless is-multiline is-mobile">
+                    <div class="column is-auto">
+                        <div class="columns is-gapless  ">
+                            <div class="column is-auto">
+                                <label class="label">Начало:</label>
+                            </div>
+                            <div class="column is-auto">
+                                <button class="button is-link is-rounded">Выбрать</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-auto">
+                        <div class="columns is-gapless">
+                            <div class="column is-auto">
+                                <label class="label">Окончание:</label>
+                            </div>
+                            <div class="column is-auto">
+                                <button class="button is-link is-rounded">Выбрать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <div class="columns is-gapless is-multiline is-mobile">
+            <div class="column is-narrow">
+                <label class="label">Тема:&nbsp;</label>
+            </div>
+            <div class="column is-auto">
+                <div class="control is-fullwidth">
+                    <div class="select is-fullwidth">
+                        <select>
+                        <option>Пашел</option>
+                        <option>На*ой</option>
+                      </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columns is-gapless is-multiline is-mobile">
+            <div class="column is-narrow">
+                <label class="label">О мероприятии:&nbsp;</label>
+            </div>
+
+        </div>
+        <div class="field-body">
+            <div class="field">
+                <div class="control">
+                    <textarea class="textarea" placeholder="Расскажите о вашем мероприятии"></textarea>
+                </div>
+            </div>
+        </div>
+
         </div>
     </section>
 
     <script>
         window.addEventListener('load', function() {
             new Glider(document.querySelector('.glider'), {
-                slidesToShow: 2,
+                slidesToShow: 1,
+
                 draggable: true,
-                dots: "#dots ",
+                dots: ".dots ",
                 arrows: {
                     prev: ".glider-prev ",
                     next: ".glider-next "
@@ -234,7 +320,10 @@
             })
         })
     </script>
-
+    <footer>
+        <hr>
+        <p>Developed by &#171;NewPage1 &#187; &copy;2020</p>
+    </footer>
 
 
 </body>

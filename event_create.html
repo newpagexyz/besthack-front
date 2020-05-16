@@ -175,19 +175,7 @@
                     </div>
 
                     <style type="text/css">
-                        .slid {
-                            border-left: 2px solid #ccc;
-                            /* Параметры линии */
-                            margin-left: 20px;
-                            /* Отступ слева */
-                            padding-left: 10px;
-                            /* Расстояние от линии до текста */
-                            border-right: 2px solid #ccc;
-                            /* Параметры линии */
-                            margin-right: 20px;
-                            /* Отступ слева */
-                            padding-right: 10px;
-                        }
+                        .slid {}
                         
                         .label {
                             margin-top: 5px;
@@ -360,42 +348,6 @@
             });
 
         });
-        $(function() {
-
-            $('#upload_file2').change(function() {
-
-                var f = this.files,
-                    i, r = new RegExp(this.accept.replace(/,/g, '|')),
-                    b = $('#image_preview_2');
-
-                for (i = 0; i < f.length; ++i) {
-
-                    if (r.test(f[i].type)) b.append("<img class='thumb' src='" + URL.createObjectURL(f[i]) + "'>");
-
-                }
-
-            });
-
-        });
-        $(function() {
-
-            $('#upload_file').change(function() {
-
-                var f = this.files,
-                    i, r = new RegExp(this.accept.replace(/,/g, '|')),
-                    b = $('#image_preview_3');
-
-                for (i = 0; i < f.length; ++i) {
-
-                    if (r.test(f[i].type)) b.append("<img class='thumb' src='" + URL.createObjectURL(f[i]) + "'>");
-
-                }
-
-            });
-
-        });
-
-
 
 
 

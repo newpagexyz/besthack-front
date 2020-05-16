@@ -10,16 +10,8 @@ class Message {
 }
 
 class RecyclerView {
-    constructor(container, maxMessages) {
-        this.container = container;
-        this.maxMessages = maxMessages;
-        this.messages = [];
-        this.pos = 0;
 
-        this.divs = [];
-        this.avatars = [];
-        this.texts = [];
-
+    createNewDivs(maxMessages) {
         for (let i = 0; i < maxMessages; i++) {
             const div = document.createElement('div');
             div.className = 'columns';
@@ -42,14 +34,28 @@ class RecyclerView {
             div.append(firstColumn);
             div.append(secondColumn);
 
-            this.container.append(div);
+            this.container.prepend(div);
         }
     }
 
+    constructor(container, maxMessages) {
+        this.container = container;
+        this.maxMessages = maxMessages;
+        this.messages = [];
+        this.pos = 0;
+
+        this.divs = [];
+        this.avatars = [];
+        this.texts = [];
+
+        this.createNewDivs(maxMessages);
+    }
+
+
     render() {
         for (let i = 0; i < Math.min(this.maxMessages, this.messages.length); i++) {
-            this.avatars[this.maxMessages - 1 - i].src = this.messages[this.pos + i].avatar;
-            this.texts[this.maxMessages - 1 - i].innerText = this.messages[this.pos + i].text;
+            this.avatars[this.pos + i].src = this.messages[this.pos + i].avatar;
+            this.texts[this.pos + i].innerText = this.messages[this.pos + i].text;
         }
     }
 
@@ -63,20 +69,11 @@ class RecyclerView {
             const currentScroll = this.container.scrollTop;
             if (currentScroll < 10) {
                 this.pos += this.maxMessages;
-                this.divs[this.divs.length - 1].scrollIntoView(true);
+                //this.divs[this.divs.length - 1].scrollIntoView(true);
+                this.createNewDivs(this.maxMessages);
                 this.render();
                 return;
             }
-            if (currentScroll > this.container.clientHeight) {
-                console.log("wut");
-                return;
-                this.pos -= this.maxMessages;
-                this.divs[0].scrollIntoView(false);
-                this.render();
-                return;
-            }
-
-
         });
     }
 

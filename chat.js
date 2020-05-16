@@ -18,9 +18,12 @@ class RecyclerView {
 
             const firstColumn = document.createElement('div');
             firstColumn.className = 'column is-one-fifth';
+            const figure = document.createElement('figure');
+            figure.className = 'image is-64x64'
             const avatar = document.createElement('img');
-            avatar.className = 'image is-128x128 is-rounded';
-            firstColumn.append(avatar);
+            figure.append(avatar);
+            avatar.className = 'is-rounded';
+            firstColumn.append(figure);
 
             const secondColumn = document.createElement('div');
             secondColumn.className = 'column';
@@ -62,6 +65,14 @@ class RecyclerView {
 
     append(message) {
         this.messages.push(message);
+        this.render();
+        this.divs[this.divs.length - 1].scrollIntoView(true);
+    }
+
+    shift(message) {
+        this.messages.unshift(message);
+        this.render();
+        this.divs[0].scrollIntoView(true);
     }
 
     init() {
@@ -81,13 +92,24 @@ class RecyclerView {
 
 function testMessages(recycler) {
     for (let i = 0; i < 100; i++) {
-        const msg = new Message('kek', 'это номер' + i,
+        const msg = new Message('kek', 'животноводство важнейшая отрасль народного хозяйства' + i,
             'avatar.jpg');
         recycler.append(msg);
     }
     recycler.render();
 }
 
+
 const myRecyclerView = new RecyclerView(mainContainer, 10);
 myRecyclerView.init();
+
+function initUi() {
+    const submitButton = document.getElementById('submit');
+    submitButton.addEventListener('click', () => {
+        const textarea = document.getElementById('textarea');
+        myRecyclerView.shift(new Message('host', textarea.value.slice(), 'avatar.jpg'));
+        textarea.value = '';
+    })
+}
 testMessages(myRecyclerView);
+initUi();

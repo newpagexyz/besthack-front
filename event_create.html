@@ -165,17 +165,42 @@
                     <div class="slid">
 
                         <img src="user.jpg">
-                        <input class="file-input" type="file" name="resume">
+                        <input class="file-input" id="1" type="file" name="resume">
                     </div>
                     <div class="slid">
                         <img src="user.jpg">
-                        <input class="file-input" type="file" name="resume">
+                        <input class="file-input" id="2" type="file" name="resume">
                     </div>
                     <div class="slid">
                         <img src="user.jpg">
-                        <input class="file-input" type="file" name="resume">
+                        <input class="file-input" id="3" type="file" name="resume">
+                    </div class="slid">
+
+                    <div>
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                        <form id="form1" runat="server">
+                            <input type='file' id="imgInp" />
+                            <img id="blah" src="#" alt="your image" />
+                        </form>
                     </div>
                 </div>
+                <script>
+                    function readURL(input) {
+                        if (input.files && input.files[0]) {
+                            var reader = new FileReader();
+
+                            reader.onload = function(e) {
+                                $('#blah').attr('src', e.target.result);
+                            }
+
+                            reader.readAsDataURL(input.files[0]);
+                        }
+                    }
+
+                    $("#imgInp").change(function() {
+                        readURL(this);
+                    });
+                </script>
                 <style type="text/css">
                     .slid {
                         border-left: 2px solid #ccc;

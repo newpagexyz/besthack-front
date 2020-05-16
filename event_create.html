@@ -218,9 +218,6 @@
             <div class="column is-auto">
                 <label class="label has-text-left">Даты проведения:</label>
             </div>
-            <div class="column is-auto">
-                <label class="label has-text-left">Время проведения:</label>
-            </div>
         </div>
         <div class="columns is-gapless is-multiline is-mobile ">
             <div class="column is-auto">
@@ -248,6 +245,20 @@
                 </div>
             </div>
             <div class="column is-auto">
+
+            </div>
+        </div>
+
+
+        <div class="columns is-gapless is-multiline is-mobile">
+
+            <div class="column is-auto">
+                <label class="label has-text-left">Время проведения:</label>
+            </div>
+        </div>
+
+        <div class="columns is-gapless is-multiline is-mobile ">
+            <div class="column is-auto">
                 <div class="columns is-gapless is-multiline is-mobile">
                     <div class="column is-auto">
                         <div class="columns is-gapless  ">
@@ -260,7 +271,7 @@
                         </div>
                     </div>
                     <div class="column is-auto">
-                        <div class="columns is-gapless">
+                        <div class="columns is-gapless  ">
                             <div class="column is-auto">
                                 <label class="label">Окончание:</label>
                             </div>
@@ -270,6 +281,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="column is-auto">
+
             </div>
         </div>
 
@@ -305,22 +319,22 @@
 
         </div>
 
-        <div class="columns  is-gapless is-multiline is-mobile" style="padding: 0 10%">
+        <div class="columns  is-gapless is-multiline is-mobile" style="padding: 0 10%; margin-left: 10%;">
             <div class="column ">
                 <label class="label has-text-centered">Опубликовать для:&nbsp;</label>
             </div>
             <div class="column ">
-                <button class="button is-link is-rounded">&nbsp;&nbsp;&nbsp;Всех&nbsp;&nbsp;&nbsp;</button>
+                <button class="button is-link is-rounded" id="btnAll" style="margin: 10px;">&nbsp;&nbsp;&nbsp;Всех&nbsp;&nbsp;&nbsp;</button>
             </div>
             <div class="column ">
-                <button class="button is-link is-rounded">Группы</button>
+                <button class="button is-link is-rounded" id="btng" style="margin: 10px;">Группы</button>
             </div>
         </div>
-        <div class="columns" style="padding: 0 25%">
-            <div class="column is-auto">
+        <div class="columns is-centered" style="padding: 0 23%; margin-left: 0.1%;">
+            <div class="column">
                 <button class="button is-link is-rounded is-size-5" style="margin-top: -8px; background-color: #76c023;">Создать</button>
             </div>
-            <div class="column is-auto">
+            <div class="column">
                 <a href='#' class=" label is-link is-size-5 has-text-centered" style=" color: #a2e76a; ">Сохранить как черновик</a>
             </div>
 
@@ -341,6 +355,24 @@
                 }
             })
         })
+        btnAll.style.backgroundColor = "#3273dc";
+        btng.style.backgroundColor = "#dfdfdf";
+        btng.style.color = "#363644";
+        btnAll.style.color = "white";
+        btng.onclick = function() {
+            btng.style.backgroundColor = "#3273dc";
+            btnAll.style.backgroundColor = "#dfdfdf";
+            btnAll.style.color = "#363644";
+            btng.style.color = "white";
+        }
+        btnAll.onclick = function() {
+            btnAll.style.backgroundColor = "#3273dc";
+            btng.style.backgroundColor = "#dfdfdf";
+            btng.style.color = "#363644";
+            btnAll.style.color = "white";
+
+
+        }
     </script>
     <footer>
         <hr>

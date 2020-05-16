@@ -13,14 +13,7 @@
 </head>
 
 <body>
-    <section class="hero is-halfheight is-info has-bg-img">
-        <img src="style/header_ev_create.jpg" class="is-back">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1 class="title is-size-2" style="color: azure;">Ваши сообщения</h1>
-            </div>
-        </div>
-    </section>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
@@ -155,34 +148,52 @@
                 </div>
             </div>
         </nav>
-        <div class="columns">
-            <div class="column" id="display-chats">
-                <a>k</a>
-            </div>
-            <div class="column">
-                <div id="message-slider" style="width: 100%; height: 400px; overflow-y: scroll; overflow-x: hidden;">
+        <section class="hero is-info">
+            <div class="hero-body">
+                <div class="container">
                 </div>
             </div>
-            <div class="column" id="other"></div>
-        </div>
-        <div style="margin-left: 30%; margin-right: 30%" class="columns">
-            <div class="control column is-four-fifths">
-                <input type="text" class="input" id="textarea"></div>
-            <div class="control column">
-                <input type="button" class="input" id='submit' value="отправитьб"></div>
-        </div>
+        </section>
+        <div class="is-fullheight-with-navbar" style=" background:url(verh.png)  no-repeat; padding-top: 5%;  ">
+            <div class="is-fullheight-with-navbar" style=" background-image:url(niz.png); background-repeat: no-repeat; background-position: bottom right;">
 
-        <div class="glider-contain">
-            <div class="columns" id='glider' style="margin-left: 30%; margin-right: 30%">
+
+                <div class="columns">
+                    <div class="column" id="display-chats">
+                        <a>k</a>
+                    </div>
+                    <div class="column box">
+                        <div id="message-slider" style="width: 100%; height: 400px; overflow-y: scroll; overflow-x: hidden;">
+                        </div>
+                    </div>
+                    <div class="column" id="other"></div>
+                </div>
+                <div style="margin-left: 30%; margin-right: 30%" class="columns">
+                    <div class="control column is-four-fifths">
+                        <input type="text" class="input" id="textarea"></div>
+                    <div class="control column">
+                        <input type="button" class="input" id='submit' value="отправитьб"></div>
+                </div>
+
+                <div class="glider-contain">
+                    <div class="columns" id='glider' style="margin-left: 30%; margin-right: 30%">
+                    </div>
+                    <button aria-label="Previous" class="glider-prev">«</button>
+                    <button aria-label="Next" class="glider-next">»</button>
+                    <div role="tablist" class="dots"></div>
+                </div>
+
+
+                <script src="chat.js"></script>
+
+
+
             </div>
-            <button aria-label="Previous" class="glider-prev">«</button>
-            <button aria-label="Next" class="glider-next">»</button>
-            <div role="tablist" class="dots"></div>
+            <footer>
+                <hr>
+                <p>Developed by &#171;NewPage1 &#187; &copy;2020</p>
+            </footer>
         </div>
-
-
-        <script src="chat.js"></script>
-
     </body>
 
 </html>

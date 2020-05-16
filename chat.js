@@ -10,25 +10,20 @@ class Message {
 }
 
 class RecyclerView {
-    constructor(container, maxMessages) {
-        this.container = container;
-        this.maxMessages = maxMessages;
-        this.messages = [];
-        this.pos = 0;
 
-        this.divs = [];
-        this.avatars = [];
-        this.texts = [];
-
+    createNewDivs(maxMessages) {
         for (let i = 0; i < maxMessages; i++) {
             const div = document.createElement('div');
             div.className = 'columns';
 
             const firstColumn = document.createElement('div');
             firstColumn.className = 'column is-one-fifth';
+            const figure = document.createElement('figure');
+            figure.className = 'image is-64x64'
             const avatar = document.createElement('img');
-            avatar.className = 'image is-128x128 is-rounded';
-            firstColumn.append(avatar);
+            figure.append(avatar);
+            avatar.className = 'is-rounded';
+            firstColumn.append(figure);
 
             const secondColumn = document.createElement('div');
             secondColumn.className = 'column';
@@ -42,20 +37,43 @@ class RecyclerView {
             div.append(firstColumn);
             div.append(secondColumn);
 
-            this.container.append(div);
+            this.container.prepend(div);
         }
     }
 
+    constructor(container, maxMessages) {
+        this.container = container;
+        this.maxMessages = maxMessages;
+        this.messages = [];
+        this.pos = 0;
+
+        this.divs = [];
+        this.avatars = [];
+        this.texts = [];
+
+        this.createNewDivs(maxMessages);
+    }
+
+
     render() {
         for (let i = 0; i < Math.min(this.maxMessages, this.messages.length); i++) {
-            this.avatars[this.maxMessages - 1 - i].src = this.messages[this.pos + i].avatar;
-            this.texts[this.maxMessages - 1 - i].innerText = this.messages[this.pos + i].text;
+            this.avatars[this.pos + i].src = this.messages[this.pos + i].avatar;
+            this.texts[this.pos + i].innerText = this.messages[this.pos + i].text;
         }
     }
 
 
     append(message) {
         this.messages.push(message);
+        this.render();
+        this.divs[this.divs.length - 1].scrollIntoView(true);
+    }
+
+    shift(message) {
+        this.messages.unshift(message);
+        this.pos = 0;
+        this.render();
+        this.divs[0].scrollIntoView(true);
     }
 
     init() {
@@ -63,20 +81,11 @@ class RecyclerView {
             const currentScroll = this.container.scrollTop;
             if (currentScroll < 10) {
                 this.pos += this.maxMessages;
-                this.divs[this.divs.length - 1].scrollIntoView(true);
+                //this.divs[this.divs.length - 1].scrollIntoView(true);
+                this.createNewDivs(this.maxMessages);
                 this.render();
                 return;
             }
-            if (currentScroll > this.container.clientHeight) {
-                console.log("wut");
-                return;
-                this.pos -= this.maxMessages;
-                this.divs[0].scrollIntoView(false);
-                this.render();
-                return;
-            }
-
-
         });
     }
 
@@ -84,13 +93,24 @@ class RecyclerView {
 
 function testMessages(recycler) {
     for (let i = 0; i < 100; i++) {
-        const msg = new Message('kek', 'это номер' + i,
+        const msg = new Message('kek', 'животноводство важнейшая отрасль народного хозяйства' + i,
             'avatar.jpg');
         recycler.append(msg);
     }
     recycler.render();
 }
 
+
 const myRecyclerView = new RecyclerView(mainContainer, 10);
 myRecyclerView.init();
+
+function initUi() {
+    const submitButton = document.getElementById('submit');
+    submitButton.addEventListener('click', () => {
+        const textarea = document.getElementById('textarea');
+        myRecyclerView.shift(new Message('host', textarea.value.slice(), 'avatar.jpg'));
+        textarea.value = '';
+    })
+}
 testMessages(myRecyclerView);
+initUi();

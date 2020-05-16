@@ -8,7 +8,7 @@ let latestTimestamp = Date.parse('March 7, 2014');
 function ajax(url, fun = false) {
     var xmlhttp = new XMLHttpRequest();
     var func = fun;
-    xmlhttp.onreadystatechange = function () {
+    xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 if (func != undefined & func != false) {
@@ -210,10 +210,10 @@ class RecyclerView {
         this.container.addEventListener('click', () => {
             //const currentScroll = this.container.scrollTop;
             //if (currentScroll < 10) {
-                this.pos += this.maxMessages;
-                loadMoreMessages(this.pos);
-                return;
-           // }
+            this.pos += this.maxMessages;
+            loadMoreMessages(this.pos);
+            return;
+            // }
         });
     }
 }

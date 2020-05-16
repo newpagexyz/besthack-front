@@ -166,17 +166,16 @@
                     <div class="slid">
 
 
-                        <figure class="image is-3by1">
-                            <input class="file-input" type="file" id="upload_file_1" name="upload_file[]" multiple="" accept="image/jpeg,image/png,image/gif" />
+                        <figure class="image is-3by1 is-fullheight-with-navbar">
                             <img src="user.jpg">
-                            <div id="image_preview_1" class="upload_preview"></div>
+                            <input class="file-input" type="file" id="upload_file" name="upload_file[]" multiple="" accept="image/jpeg,image/png,image/gif" />
+
+                            <div id="image_preview" class="upload_preview"></div>
                         </figure>
 
                     </div>
 
                     <style type="text/css">
-                        .slid {}
-                        
                         .label {
                             margin-top: 5px;
                         }
@@ -184,145 +183,145 @@
 
                 </div>
             </div>
-        </div>
 
-        <section class="container" style="padding: 0 10%;">
-            <div class="columns is-gapless is-multiline is-mobile">
 
-                <div class="column is-narrow">
-                    <label class="label">Название:&nbsp;</label>
-                </div>
-                <div class="column is-auto">
-                    <input class="input" type="text" placeholder="Название мерроприятия">
-                </div>
-            </div>
-            <div class="columns is-gapless is-multiline is-mobile">
+            <section class="container" style="padding: 0 10%;">
+                <div class="columns is-gapless is-multiline is-mobile">
 
-                <div class="column is-auto">
-                    <label class="label has-text-left">Даты проведения:</label>
+                    <div class="column is-narrow">
+                        <label class="label">Название:&nbsp;</label>
+                    </div>
+                    <div class="column is-auto">
+                        <input class="input" type="text" placeholder="Название мерроприятия">
+                    </div>
                 </div>
-            </div>
-            <div class="columns is-gapless is-multiline is-mobile ">
-                <div class="column is-auto">
-                    <div class="columns is-gapless is-multiline is-mobile">
-                        <div class="column is-auto">
-                            <div class="columns is-gapless  ">
-                                <div class="column is-auto">
-                                    <label class="label">Начало:</label>
-                                </div>
-                                <div class="column is-auto">
-                                    <button class="button is-link is-rounded">Выбрать</button>
+                <div class="columns is-gapless is-multiline is-mobile">
+
+                    <div class="column is-auto">
+                        <label class="label has-text-left">Даты проведения:</label>
+                    </div>
+                </div>
+                <div class="columns is-gapless is-multiline is-mobile ">
+                    <div class="column is-auto">
+                        <div class="columns is-gapless is-multiline is-mobile">
+                            <div class="column is-auto">
+                                <div class="columns is-gapless  ">
+                                    <div class="column is-auto">
+                                        <label class="label">Начало:</label>
+                                    </div>
+                                    <div class="column is-auto">
+                                        <button class="button is-link is-rounded">Выбрать</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="column is-auto">
-                            <div class="columns is-gapless  ">
-                                <div class="column is-auto">
-                                    <label class="label">Окончание:</label>
-                                </div>
-                                <div class="column is-auto">
-                                    <button class="button is-link is-rounded">Выбрать</button>
+                            <div class="column is-auto">
+                                <div class="columns is-gapless  ">
+                                    <div class="column is-auto">
+                                        <label class="label">Окончание:</label>
+                                    </div>
+                                    <div class="column is-auto">
+                                        <button class="button is-link is-rounded">Выбрать</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="column is-auto">
+
+                    </div>
                 </div>
-                <div class="column is-auto">
 
+
+                <div class="columns is-gapless is-multiline is-mobile">
+
+                    <div class="column is-auto">
+                        <label class="label has-text-left">Время проведения:</label>
+                    </div>
                 </div>
-            </div>
 
-
-            <div class="columns is-gapless is-multiline is-mobile">
-
-                <div class="column is-auto">
-                    <label class="label has-text-left">Время проведения:</label>
-                </div>
-            </div>
-
-            <div class="columns is-gapless is-multiline is-mobile ">
-                <div class="column is-auto">
-                    <div class="columns is-gapless is-multiline is-mobile">
-                        <div class="column is-auto">
-                            <div class="columns is-gapless  ">
-                                <div class="column is-auto">
-                                    <label class="label">Начало:</label>
-                                </div>
-                                <div class="column is-auto">
-                                    <button class="button is-link is-rounded">Выбрать</button>
+                <div class="columns is-gapless is-multiline is-mobile ">
+                    <div class="column is-auto">
+                        <div class="columns is-gapless is-multiline is-mobile">
+                            <div class="column is-auto">
+                                <div class="columns is-gapless  ">
+                                    <div class="column is-auto">
+                                        <label class="label">Начало:</label>
+                                    </div>
+                                    <div class="column is-auto">
+                                        <button class="button is-link is-rounded">Выбрать</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="column is-auto">
-                            <div class="columns is-gapless  ">
-                                <div class="column is-auto">
-                                    <label class="label">Окончание:</label>
-                                </div>
-                                <div class="column is-auto">
-                                    <button class="button is-link is-rounded">Выбрать</button>
+                            <div class="column is-auto">
+                                <div class="columns is-gapless  ">
+                                    <div class="column is-auto">
+                                        <label class="label">Окончание:</label>
+                                    </div>
+                                    <div class="column is-auto">
+                                        <button class="button is-link is-rounded">Выбрать</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="column is-auto">
+                    <div class="column is-auto">
 
+                    </div>
                 </div>
-            </div>
 
 
-            <div class="columns is-gapless is-multiline is-mobile">
-                <div class="column is-narrow">
-                    <label class="label">Тема:&nbsp;</label>
-                </div>
-                <div class="column is-auto">
-                    <div class="control is-fullwidth">
-                        <div class="select is-fullwidth">
-                            <select>
+                <div class="columns is-gapless is-multiline is-mobile">
+                    <div class="column is-narrow">
+                        <label class="label">Тема:&nbsp;</label>
+                    </div>
+                    <div class="column is-auto">
+                        <div class="control is-fullwidth">
+                            <div class="select is-fullwidth">
+                                <select>
                         <option>Пашел</option>
                         <option>На*ой</option>
                       </select>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="columns is-gapless is-multiline is-mobile">
-                <div class="column is-narrow">
-                    <label class="label">О мероприятии:&nbsp;</label>
-                </div>
+                <div class="columns is-gapless is-multiline is-mobile">
+                    <div class="column is-narrow">
+                        <label class="label">О мероприятии:&nbsp;</label>
+                    </div>
 
-            </div>
-            <div class="field-body" style="margin-bottom: 20px ;">
-                <div class="field">
-                    <div class="control">
-                        <textarea class="textarea" placeholder="Расскажите о вашем мероприятии"></textarea>
+                </div>
+                <div class="field-body" style="margin-bottom: 20px ;">
+                    <div class="field">
+                        <div class="control">
+                            <textarea class="textarea" placeholder="Расскажите о вашем мероприятии"></textarea>
+                        </div>
                     </div>
                 </div>
-            </div>
 
 
 
-            <div class="columns  is-gapless is-multiline is-mobile" style="padding: 0 10%; margin-left: 10%;">
-                <div class="column ">
-                    <label class="label has-text-centered">Опубликовать для:&nbsp;</label>
+                <div class="columns  is-gapless is-multiline is-mobile" style="padding: 0 10%; margin-left: 10%;">
+                    <div class="column ">
+                        <label class="label has-text-centered" style="margin-top: 15px;">Опубликовать для:&nbsp;</label>
+                    </div>
+                    <div class="column ">
+                        <button class="button is-link is-rounded" id="btnAll" style="margin: 10px;">&nbsp;&nbsp;&nbsp;Всех&nbsp;&nbsp;&nbsp;</button>
+                    </div>
+                    <div class="column ">
+                        <button class="button is-link is-rounded" id="btng" style="margin: 10px;">Группы</button>
+                    </div>
                 </div>
-                <div class="column ">
-                    <button class="button is-link is-rounded" id="btnAll" style="margin: 10px;">&nbsp;&nbsp;&nbsp;Всех&nbsp;&nbsp;&nbsp;</button>
-                </div>
-                <div class="column ">
-                    <button class="button is-link is-rounded" id="btng" style="margin: 10px;">Группы</button>
-                </div>
-            </div>
-            <div class="columns is-centered" style="padding: 0 23%; margin-left: 0.1%;">
-                <div class="column">
-                    <button class="button is-link is-rounded is-size-5" style="margin-top: -8px; background-color: #76c023;">Создать</button>
-                </div>
-                <div class="column">
-                    <a href='#' class=" label  is-size-5 has-text-centered" style=" color: #a2e76a; ">Сохранить как черновик</a>
-                </div>
+                <div class="columns is-centered" style="padding: 0 23%; margin-left: 0.1%;">
+                    <div class="column">
+                        <button class="button is-link is-rounded is-size-5" style="margin-top: -8px; background-color: #76c023;">Создать</button>
+                    </div>
+                    <div class="column">
+                        <a href='#' class=" label  is-size-5 has-text-centered" style=" color: #a2e76a; ">Сохранить как черновик</a>
+                    </div>
 
-            </div>
-
+                </div>
+        </div>
         </section>
     </div>
     </div>
@@ -333,11 +332,11 @@
 
         $(function() {
 
-            $('#upload_file_1').change(function() {
+            $('#upload_file').change(function() {
 
                 var f = this.files,
                     i, r = new RegExp(this.accept.replace(/,/g, '|')),
-                    b = $('#image_preview_1');
+                    b = $('#image_preview');
 
                 for (i = 0; i < f.length; ++i) {
 

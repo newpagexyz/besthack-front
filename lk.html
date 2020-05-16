@@ -14,7 +14,9 @@
     <script src="glider.js"></script>
 </head>
 
-<body class="has-navbar-fixed-top">
+<body class="has-navbar-fixed-top ">
+
+
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="besthack.newpage.xyz">
@@ -131,177 +133,180 @@
         </div>
     </section>
 
+    <div class="is-fullheight-with-navbar" style=" background:url(verh.png)  no-repeat; padding-top: 5%;  ">
 
-    <section class="container" style="margin-top: 2%; padding:0 10% ;">
-        <p class="title" style="text-align: center; margin: 50px 0;">Ваш профиль</p>
-        <div class="columns is-centered">
+        <section class="container " style="margin-top: 2%; padding:0 10% ; ">
 
-            <div class="column is-auto">
-                <figure class="image is-rounded">
+            <p class="title " style="text-align: center; margin: 50px 0; ">Ваш профиль</p>
+            <div class="columns is-centered ">
 
-                    <input class="file-input is-rounded" type="file" id="upload_file" name="upload_file[]" multiple="" accept="image/jpeg,image/png,image/gif" />
-                    <img id="_image" src="user.jpg">
-                    <div id="image_preview" class="upload_preview"></div>
-                </figure>
-                <script>
-                    $(function() {
+                <div class="column is-auto ">
+                    <figure class="image is-rounded ">
 
-                        $('#upload_file').change(function() {
-                            _image.style.display = "none";
-                            var f = this.files,
-                                i, r = new RegExp(this.accept.replace(/,/g, '|')),
-                                b = $('#image_preview');
+                        <input class="file-input is-rounded " type="file " id="upload_file " name="upload_file[] " multiple=" " accept="image/jpeg,image/png,image/gif " />
+                        <img id="_image " src="user.jpg ">
+                        <div id="image_preview " class="upload_preview "></div>
+                    </figure>
+                    <script>
+                        $(function() {
 
-                            for (i = 0; i < f.length; ++i) {
+                            $('#upload_file').change(function() {
+                                _image.style.display = "none ";
+                                var f = this.files,
+                                    i, r = new RegExp(this.accept.replace(/,/g, '|')),
+                                    b = $('#image_preview');
 
-                                if (r.test(f[i].type)) b.append("<img class='thumb' src='" + URL.createObjectURL(f[i]) + "'>");
+                                for (i = 0; i < f.length; ++i) {
 
-                            }
-
+                                    if (r.test(f[i].type)) b.append("<img class='thumb' src='" + URL.createObjectURL(f[i]) + "'>");
+                                }
+                            });
                         });
+                    </script>
 
-                    });
-                </script>
-
-            </div>
+                </div>
 
 
-            <div class="column is-autos" style="text-align: center">
+                <div class="column is-autos" style="text-align: center">
 
-                <div class="columns">
-                    <div class="column" style="text-align: left; color: blue; ">
-                        <p>Статус</p><br>
-                        <div class="field" style="margin: 10px 0 10px;">
-                            <p>Имя</p>
+                    <div class="columns">
+                        <div class="column" style="text-align: left; color: blue; ">
+                            <p>Статус</p><br>
+                            <div class="field" style="margin: 10px 0 10px;">
+                                <p>Имя</p>
+                            </div>
+                            <div class="field" style="margin: 25px 0;">
+                                <p>Фамилия</p>
+                            </div>
+                            <div class="field" style="margin: 30px 0;">
+                                <p>Отчество</p>
+                            </div>
+                            <div class="field" style="margin: 0 0 25px 0 ;">
+                                <p>Место учебы</p>
+                            </div>
+                            <div class="field" style="margin: 25px 0;">
+                                <p>Место работы</p>
+                            </div>
+
                         </div>
-                        <div class="field" style="margin: 25px 0;">
-                            <p>Фамилия</p>
-                        </div>
-                        <div class="field" style="margin: 30px 0;">
-                            <p>Отчество</p>
-                        </div>
-                        <div class="field" style="margin: 0 0 25px 0 ;">
-                            <p>Место учебы</p>
-                        </div>
-                        <div class="field" style="margin: 25px 0;">
-                            <p>Место работы</p>
-                        </div>
+                        <div class="column">
+                            <p>Учащийся</p><br>
 
-                    </div>
-                    <div class="column">
-                        <p>Учащийся</p><br>
-
-                        <div class="field">
-                            <input class="input" type="text" placeholder="Имя" value="Иван">
-                        </div>
-                        <div class="field">
-                            <input class="input" type="text" placeholder="Фамилия" value="Иванов">
-                        </div>
-                        <div class="field">
-                            <input class="input" type="text" placeholder="Отчество" value="Иванович">
-                        </div>
-                        <div class="field">
-                            <input class="input" type="text" placeholder="Место учебы" value="СПБСТУ ИМЕНИ ДЕМИДОВИЧА">
-                        </div>
-                        <div class="field">
-                            <input class="input" type="text" placeholder="Место работы" value="ГАзПРОм">
-                        </div>
+                            <div class="field">
+                                <input class="input" type="text" placeholder="Имя" value="Иван">
+                            </div>
+                            <div class="field">
+                                <input class="input" type="text" placeholder="Фамилия" value="Иванов">
+                            </div>
+                            <div class="field">
+                                <input class="input" type="text" placeholder="Отчество" value="Иванович">
+                            </div>
+                            <div class="field">
+                                <input class="input" type="text" placeholder="Место учебы" value="СПБСТУ ИМЕНИ ДЕМИДОВИЧА">
+                            </div>
+                            <div class="field">
+                                <input class="input" type="text" placeholder="Место работы" value="ГАзПРОм">
+                            </div>
 
 
 
-                        <!-- php -->
+                            <!-- php -->
 
-                        <style>
-                            input .input {
-                                padding-bottom: 100px;
-                            }
-                        </style>
+                            <style>
+                                input .input {
+                                    padding-bottom: 100px;
+                                }
+                            </style>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section style="padding:0 10% ;text-align: center; margin-top: 2%; ">
-        <div class="title" style="margin: 50px 0;">О себе</div>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus augue nisl, ac varius nisl iaculis ut. Vestibulum quis nulla commodo, porta nulla in, interdum leo. Integer id lacus eu elit consequat euismod. Nullam at odio ultrices urna lacinia
-        commodo. Pellentesque tincidunt venenatis odio, vel ultrices orci dictum vitae. Sed ut bibendum nulla. Maecenas aliquam viverra sollicitudin.
-    </section>
-    <section style="padding:0 10% ;text-align: center; margin-top: 2%; ">
-        <div class="title" style="margin-top: 50px ;">Мои проекты</div>
-        <div class="hero is-fullheight-with-navbar">
-            <div class="hero-body">
-                <div class="glider-contain" style="text-align: center;">
+        </section>
+        <section style="padding:0 10% ;text-align: center; margin-top: 2%; ">
+            <div class="title" style="margin: 50px 0;">О себе</div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus augue nisl, ac varius nisl iaculis ut. Vestibulum quis nulla commodo, porta nulla in, interdum leo. Integer id lacus eu elit consequat euismod. Nullam at odio ultrices urna lacinia
+            commodo. Pellentesque tincidunt venenatis odio, vel ultrices orci dictum vitae. Sed ut bibendum nulla. Maecenas aliquam viverra sollicitudin.
+        </section>
 
-                    <div class="glider">
-                        <div class="hero is-fullheight-with-navbar ">
-                            <figure class="image is-3by1 "><img src="10.jpg " style="padding-left: 20%; padding-right: 20% "></figure>
-                            <div class="hero-body " style="text-align: center; left: 300px; top: -50px ">Повседневная практика показывает, что высококачественный прототип будущего проекта представляет собой интересный эксперимент проверки укрепления моральных ценностей. В своём стремлении повысить качество жизни, они забывают,
-                                что семантический разбор внешних противодействий играет определяющее значение для поставленных обществом задач.
+        <section style="padding:0 10% ;text-align: center; margin-top: 2%; ">
+            <div class="title" style="margin-top: 50px ;">Мои проекты</div>
+            <div class="hero is-fullheight-with-navbar">
+                <div class="hero-body">
+                    <div class="glider-contain" style="text-align: center;">
+
+                        <div class="glider">
+                            <div class="hero is-fullheight-with-navbar ">
+                                <figure class="image is-3by1 "><img src="10.jpg " style="padding-left: 20%; padding-right: 20% "></figure>
+                                <div class="hero-body " style="text-align: center; left: 300px; top: -50px ">Повседневная практика показывает, что высококачественный прототип будущего проекта представляет собой интересный эксперимент проверки укрепления моральных ценностей. В своём стремлении повысить качество жизни, они забывают,
+                                    что семантический разбор внешних противодействий играет определяющее значение для поставленных обществом задач.
+                                </div>
+                            </div>
+                            <div class="hero is-fullheight-with-navbar ">
+                                <figure class="image is-3by1 "><img src="20.jpg " style="padding-left: 20%; padding-right: 20% "></figure>
+                                <div class="hero-body " style="text-align: center; left: 300px; top: -50px ">Но постоянный количественный рост и сфера нашей активности прекрасно подходит для реализации форм воздействия. Предварительные выводы неутешительны: реализация намеченных плановых заданий не даёт нам иного выбора, кроме
+                                    определения дальнейших направлений развития.
+                                </div>
+                            </div>
+                            <div class="hero is-fullheight-with-navbar ">
+                                <figure class="image is-3by1 "><img src="40.jpg " style="padding-left: 20%; padding-right: 20% "></figure>
+                                <div class="hero-body " style="text-align: center; top: -50px ">
+                                    Постоянный количественный рост и сфера нашей активности в значительной степени обусловливает важность форм воздействия. Внезапно, диаграммы связей и по сей день остаются уделом либералов, которые жаждут быть указаны как претенденты на роль ключевых факторов.
+                                </div>
                             </div>
                         </div>
-                        <div class="hero is-fullheight-with-navbar ">
-                            <figure class="image is-3by1 "><img src="20.jpg " style="padding-left: 20%; padding-right: 20% "></figure>
-                            <div class="hero-body " style="text-align: center; left: 300px; top: -50px ">Но постоянный количественный рост и сфера нашей активности прекрасно подходит для реализации форм воздействия. Предварительные выводы неутешительны: реализация намеченных плановых заданий не даёт нам иного выбора, кроме определения
-                                дальнейших направлений развития.
-                            </div>
-                        </div>
-                        <div class="hero is-fullheight-with-navbar ">
-                            <figure class="image is-3by1 "><img src="40.jpg " style="padding-left: 20%; padding-right: 20% "></figure>
-                            <div class="hero-body " style="text-align: center; top: -50px ">
-                                Постоянный количественный рост и сфера нашей активности в значительной степени обусловливает важность форм воздействия. Внезапно, диаграммы связей и по сей день остаются уделом либералов, которые жаждут быть указаны как претенденты на роль ключевых факторов.
-                            </div>
-                        </div>
+                        <button aria-label="Previous " class="glider-prev ">«</button>
+                        <button aria-label="Next " class="glider-next ">»</button>
+
+
+                        <div role="tablist " class="dots "></div>
                     </div>
-                    <button aria-label="Previous " class="glider-prev ">«</button>
-                    <button aria-label="Next " class="glider-next ">»</button>
+                </div>
+        </section>
+        </div>
+        <div class="is-fullheight-with-navbar" style=" background:url(niz.png) right bottom no-repeat;">
+            <div class="section" style="padding:0 10%;text-align: center; margin-top: -150px; ">
+                <h1 class="title " style="padding-bottom: 50px; ">Мои курсы и стажировки </h1>
+                <div class="columns ">
+                    <div class=" column ">
+                        <figure class="image is-256x256 "> <img src="60.jpg "></figure>
+                        <br>
+                        <p>Международная стажировка</p>
+                        <button class="button is-link is-rounded " style="margin: 2vw; ">Подробнее</button>
 
+                    </div>
+                    <div class="column ">
+                        <figure class="image is-256x256 "><img src="90.jpg "></figure><br>
+                        <p>Дипломы ведущих стран мира</p>
+                        <button class="button is-link is-rounded " style="margin: 2vw; ">Подробнее</button>
 
-                    <div role="tablist " class="dots "></div>
+                    </div>
+                    <div class="column ">
+                        <figure class="image is-256x256 "> <img src="40.jpg "></figure><br>
+                        <p>Новый коллектив и поездки</p>
+                        <button class="button is-link is-rounded " style="margin: 2vw; ">Подробнее</button>
+
+                    </div>
+
                 </div>
             </div>
-    </section>
-    <div class="section" style="text-align: center; margin-top: -150px; ">
-        <h1 class="title " style="padding-bottom: 50px; ">Мои курсы и стажировки </h1>
-        <div class="columns ">
-            <div class=" column ">
-                <figure class="image is-256x256 "> <img src="60.jpg "></figure>
-                <br>
-                <p>Международная стажировка</p>
-                <button class="button is-link is-rounded " style="margin: 2vw; ">Подробнее</button>
-
-            </div>
-            <div class="column ">
-                <figure class="image is-256x256 "><img src="90.jpg "></figure><br>
-                <p>Дипломы ведущих стран мира</p>
-                <button class="button is-link is-rounded " style="margin: 2vw; ">Подробнее</button>
-
-            </div>
-            <div class="column ">
-                <figure class="image is-256x256 "> <img src="40.jpg "></figure><br>
-                <p>Новый коллектив и поездки</p>
-                <button class="button is-link is-rounded " style="margin: 2vw; ">Подробнее</button>
-
-            </div>
-
         </div>
-    </div>
-    <footer>
-        <hr>
-        <p>Developed by &#171;NewPage1 &#187; &copy;2020</p>
-    </footer>
-    <script>
-        window.addEventListener('load', function() {
-            new Glider(document.querySelector('.glider'), {
-                slidesToShow: 1,
-                draggable: true,
-                dots: "#dots ",
-                arrows: {
-                    prev: ".glider-prev ",
-                    next: ".glider-next "
-                }
+        <footer>
+            <hr>
+            <p>Developed by &#171;NewPage1 &#187; &copy;2020</p>
+        </footer>
+        <script>
+            window.addEventListener('load', function() {
+                new Glider(document.querySelector('.glider'), {
+                    slidesToShow: 1,
+                    draggable: true,
+                    dots: "#dots ",
+                    arrows: {
+                        prev: ".glider-prev ",
+                        next: ".glider-next "
+                    }
+                })
             })
-        })
-    </script>
+        </script>
 
 </body>
 

@@ -71,6 +71,7 @@ class RecyclerView {
 
     shift(message) {
         this.messages.unshift(message);
+        this.pos = 0;
         this.render();
         this.divs[0].scrollIntoView(true);
     }

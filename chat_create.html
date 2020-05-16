@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>
+        Создание чата
+    </title>
+    <link rel='stylesheet' type='text/css' href='style/header.css'>
+    <link rel='stylesheet' type='text/css' href='style/index.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="glider.css">
+    <script src="glider.js"></script>
+</head>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+
+            // Add a click event on each of them
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+
+                });
+            });
+        }
+
+    });
+</script>
+
+<body class="has-navbar-fixed-top">
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="besthack.newpage.xyz">
+                <img src="https://static.tildacdn.com/tild6466-6365-4164-b137-336431383231/noroot.png" width="128" height="128">
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link is-arrowless is-arrowless">
+                    Мероприятия
+                </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                        Мероприятия раз
+                    </a>
+                        <a class="navbar-item">
+                        Мероприятия два
+                    </a>
+                        <a class="navbar-item">
+                        Мероприятия три
+                    </a>
+                    </div>
+                </div>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link is-arrowless">
+                    Участникам
+                </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                        Участникам раз
+                    </a>
+                        <a class="navbar-item">
+                        Участникам два
+                    </a>
+                        <a class="navbar-item">
+                        Участникам три
+                    </a>
+                        <a class="navbar-item">
+                        участникам четыре
+                    </a>
+                    </div>
+                </div>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link is-arrowless">
+                    Партнерам
+                </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                        Партнерам раз
+                    </a>
+                        <a class="navbar-item">
+                        два
+                    </a>
+                        <a class="navbar-item">
+                        три
+                    </a>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link is-arrowless">
+                    О нас
+                </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                        О нас раз
+                    </a>
+                        <a class="navbar-item">
+                        О нас два
+                    </a>
+                        <a class="navbar-item">
+                        О нас три
+                    </a>
+                    </div>
+                </div>
+                <a class="navbar-item">
+                Контакты
+            </a>
+            </div>
+
+            <div class="navbar-end">
+                <a class="navbar-item">
+                Личный кабинет
+            </a>
+                <a class="navbar-item">
+                    <figure class="image is-64x64">
+                        <img src="user.jpg" class="is-rounded">
+                    </figure>
+
+                </a>
+            </div>
+        </div>
+    </nav>
+    <section class="hero is-halfheight is-info has-bg-img">
+        <img src="style/header_ev_create.jpg" class="is-back">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-size-2" style="color: azure;">Создание чата</h1>
+            </div>
+        </div>
+    </section>
+    <div class="is-fullheight-with-navbar" style=" background:url(verh.png)  no-repeat; ">
+        <div class="is-fullheight-with-navbar" style=" background-image:url(niz.png); background-repeat: no-repeat; background-position: bottom right;">
+            <div class="hero is-small" style="padding: 0 10%;">
+                <div class="hero-body">
+                    <div class="slid">
+
+
+                        <a>
+                            <figure class="is-halfheight has-ratio " width="640" height="360" style="padding-left: 20%; padding-right: 20%">
+                                <img src="60.jpg">
+                                <input class="file-input" type="file" id="upload_file" name="upload_file[]" multiple="" accept="image/jpeg,image/png,image/gif" />
+
+                                <div id="image_preview" class="upload_preview"></div>
+                            </figure>
+                        </a>
+                    </div>
+
+                    <style type="text/css">
+                        .label {
+                            margin-top: 5px;
+                        }
+                    </style>
+
+                </div>
+            </div>
+            <section class="container" style="padding: 0 10%; padding-bottom: 5%;">
+                <div class="columns is-gapless is-multiline is-mobile" style="margin: 0 10%;">
+
+                    <div class="column is-narrow">
+                        <label class="label">Название чата:&nbsp;</label>
+                    </div>
+                    <div class="column is-auto">
+                        <input class="input" type="text" placeholder="Название">
+                    </div>
+                </div>
+                <a><button class="button is-link is-rounded " style="margin: 2vw 0 -2vw; position: relative;left: 50%;transform: translate(-50%, 0);">Создать</button></a>
+
+            </section>
+
+        </div>
+    </div>
+</body>
+
+</html>

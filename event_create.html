@@ -318,6 +318,14 @@
                     </div>
                     <div class="column ">
                         <button class="button is-link is-rounded" id="btng" style="margin: 10px;">Группы</button>
+                        <div id="sel" class="control">
+                            <div class="select">
+                                <select>
+                                <option>Select dropdown</option><!--Сюда айди чатав пихать-->>
+                                <option>With options</option>
+                              </select>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="columns is-centered" style="padding: 0 23%; margin-left: 0.1%;">
@@ -376,18 +384,21 @@
         btng.style.backgroundColor = "#dfdfdf";
         btng.style.color = "#363644";
         btnAll.style.color = "white";
+        sel.style.display = "none";
         btng.onclick = function() {
             btng.style.backgroundColor = "#3273dc";
             btnAll.style.backgroundColor = "#dfdfdf";
             btnAll.style.color = "#363644";
             btng.style.color = "white";
+            sel.style.display = "flex";
         }
+
         btnAll.onclick = function() {
             btnAll.style.backgroundColor = "#3273dc";
             btng.style.backgroundColor = "#dfdfdf";
             btng.style.color = "#363644";
             btnAll.style.color = "white";
-
+            sel.style.display = "none";
 
         }
     </script>

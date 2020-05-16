@@ -9,6 +9,7 @@
     <link rel='stylesheet' type='text/css' href='style/header.css'>
     <link rel='stylesheet' type='text/css' href='style/index.css'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="glider.css">
     <script src="glider.js"></script>
@@ -164,43 +165,29 @@
                 <div class="glider">
                     <div class="slid">
 
-                        <img src="user.jpg">
-                        <input class="file-input" id="1" type="file" name="resume">
+
+                        <figure class="image is-3by1">
+                            <input class="file-input" type="file" id="upload_file_1" name="upload_file[]" multiple="" accept="image/jpeg,image/png,image/gif" />
+                            <img src="user.jpg">
+                            <div id="image_preview_1" class="upload_preview"></div>
+                        </figure>
+
                     </div>
                     <div class="slid">
-                        <img src="user.jpg">
-                        <input class="file-input" id="2" type="file" name="resume">
+                        <figure class="image is-3by1">
+                            <input class="file-input" type="file" id="upload_file2" name="upload_file[]" multiple="" accept="image/jpeg,image/png,image/gif" />
+                            <img src="user.jpg">
+                            <div id="image_preview_2" class="upload_preview"></div>
+                        </figure>
                     </div>
                     <div class="slid">
-                        <img src="user.jpg">
-                        <input class="file-input" id="3" type="file" name="resume">
+                        <figure class="image is-3by1">
+                            <input class="file-input" type="file" id="upload_file" name="upload_file[]" multiple="" accept="image/jpeg,image/png,image/gif" />
+                            <img src="user.jpg">
+                            <div id="image_preview_3" class="upload_preview"></div>
+                        </figure>
                     </div class="slid">
-
-                    <div>
-                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-                        <form id="form1" runat="server">
-                            <input type='file' id="imgInp" />
-                            <img id="blah" src="#" alt="your image" />
-                        </form>
-                    </div>
                 </div>
-                <script>
-                    function readURL(input) {
-                        if (input.files && input.files[0]) {
-                            var reader = new FileReader();
-
-                            reader.onload = function(e) {
-                                $('#blah').attr('src', e.target.result);
-                            }
-
-                            reader.readAsDataURL(input.files[0]);
-                        }
-                    }
-
-                    $("#imgInp").change(function() {
-                        readURL(this);
-                    });
-                </script>
                 <style type="text/css">
                     .slid {
                         border-left: 2px solid #ccc;
@@ -361,7 +348,7 @@
                 <button class="button is-link is-rounded is-size-5" style="margin-top: -8px; background-color: #76c023;">Создать</button>
             </div>
             <div class="column">
-                <a href='#' class=" label is-link is-size-5 has-text-centered" style=" color: #a2e76a; ">Сохранить как черновик</a>
+                <a href='#' class=" label  is-size-5 has-text-centered" style=" color: #a2e76a; ">Сохранить как черновик</a>
             </div>
 
         </div>
@@ -369,6 +356,66 @@
     </section>
 
     <script>
+        upload_file.onclick = function() {
+
+        }
+
+        $(function() {
+
+            $('#upload_file_1').change(function() {
+
+                var f = this.files,
+                    i, r = new RegExp(this.accept.replace(/,/g, '|')),
+                    b = $('#image_preview_1');
+
+                for (i = 0; i < f.length; ++i) {
+
+                    if (r.test(f[i].type)) b.append("<img class='thumb' src='" + URL.createObjectURL(f[i]) + "'>");
+
+                }
+
+            });
+
+        });
+        $(function() {
+
+            $('#upload_file2').change(function() {
+
+                var f = this.files,
+                    i, r = new RegExp(this.accept.replace(/,/g, '|')),
+                    b = $('#image_preview_2');
+
+                for (i = 0; i < f.length; ++i) {
+
+                    if (r.test(f[i].type)) b.append("<img class='thumb' src='" + URL.createObjectURL(f[i]) + "'>");
+
+                }
+
+            });
+
+        });
+        $(function() {
+
+            $('#upload_file').change(function() {
+
+                var f = this.files,
+                    i, r = new RegExp(this.accept.replace(/,/g, '|')),
+                    b = $('#image_preview_3');
+
+                for (i = 0; i < f.length; ++i) {
+
+                    if (r.test(f[i].type)) b.append("<img class='thumb' src='" + URL.createObjectURL(f[i]) + "'>");
+
+                }
+
+            });
+
+        });
+
+
+
+
+
         window.addEventListener('load', function() {
             new Glider(document.querySelector('.glider'), {
                 slidesToShow: 1,
@@ -380,6 +427,8 @@
                     next: ".glider-next "
                 }
             })
+
+
         })
         btnAll.style.backgroundColor = "#3273dc";
         btng.style.backgroundColor = "#dfdfdf";

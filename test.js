@@ -8,5 +8,5 @@
   {"username":"козлик", "id":"7", "img":"avatar.png"}, 
   {"username":"жеребенок", "id":"8", "img":"avatar.png"}, 
   {"username":"яблоко", "id":"9", "img":"avatar.png"}, 
-  {"username":"груша", "id":"10", "img":"avatar.png"}, 
+  {"username":"груша", "id":"10", "img":"avatar.png"}
  ]

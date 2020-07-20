@@ -6,19 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Vue.js Fullpage Scroll</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiper@5.3.6/css/swiper.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@5.3.6/js/swiper.min.js"></script>
 </head>
 <body>
 <div id="app" style="width: 70vw; height: 70vh; overflow-y: hidden;">
     <div class="sections-menu">
       <span
               class="menu-point"
-              v-bind:class="{active: activeSection == index}"
+              v-bind:class="{active: activeSection === index}"
               v-on:click="scrollToSection(index)"
               v-for="(offset, index) in offsets"
               v-bind:key="index">
       </span>
     </div>
     <section class="fullpage blue">
+        <div v-if="(activeSection == 0)"
+             v-on:click="showFilter(e)"
+             style="position: absolute; top: 10px">
+            Фильтр
+        </div>
+
+        <transition name="slide-fade">
+            <div v-if="((isFilterActive) && (activeSection === 0))"
+                 style="position: absolute; top: 40px">
+                <div class="filterPanel">
+                    <swiper ref="swiperComponent"
+                            :options="swiperOptions"
+                            @click-slide="onSwiperClickSlide">
+                        <swiper-slide v-bind:class="{selectedGenre: this.selectedIndexes[0]}">Фэнтези</swiper-slide>
+                        <swiper-slide v-bind:class="{selectedGenre: this.selectedIndexes[1]}">Триллеры</swiper-slide>
+                        <swiper-slide v-bind:class="{selectedGenre: this.selectedIndexes[2]}">Комедии</swiper-slide>
+                        <swiper-slide v-bind:class="{selectedGenre: this.selectedIndexes[3]}">Фантастика</swiper-slide>
+                        <swiper-slide v-bind:class="{selectedGenre: this.selectedIndexes[4]}">Ужасы</swiper-slide>
+                        <swiper-slide v-bind:class="{selectedGenre: this.selectedIndexes[5]}">Драмы</swiper-slide>
+                        <swiper-slide v-bind:class="{selectedGenre: this.selectedIndexes[6]}">Мелодрамы</swiper-slide>
+                        <div class="swiper-pagination" slot="pagination"></div>
+                    </swiper>
+                    <div>
+                        <input v-model="onlyWith" type="checkbox" id="onlyWith" name="onlyWith">
+                        <label for="onlyWith" style="color: black">Только с билетами</label>
+                    </div>
+                </div>
+            </div>
+        </transition>
+
         <h1>Vue.js Fullpage Scroll</h1>
         <p>Билеты</p>
     </section>
@@ -117,6 +149,50 @@
         transform: scale(1.5);
     }
 
+    .filterPanel {
+        background: #FFFFEE;
+        width: 60vw;
+    }
+
+    .swiper-container {
+        height: 100px;
+        width: 100%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 38px;
+        color: black;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .slide-fade-enter-active {
+        transition: all .3s ease;
+    }
+
+    .slide-fade-leave-active {
+        transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    }
+
+    .slide-fade-enter, .slide-fade-leave-to
+        /* .slide-fade-leave-active до версии 2.1.8 */
+    {
+        transform: translateX(10px);
+        opacity: 0;
+    }
+
+    .selectedGenre {
+        background: #ab4545;
+    }
+
     @media screen and (max-width: 1200px) {
         h1 {
             font-size: 2.5em;
@@ -124,16 +200,44 @@
     }
 </style>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/vue-awesome-swiper"></script>
 <script>
+    Vue.use(VueAwesomeSwiper)
     const app = new Vue({
         el: '#app',
         data: {
             inMove: false,
             activeSection: 0,
             offsets: [],
-            touchStartY: 0
+            touchStartY: 0,
+            isFilterActive: false,
+            onlyWith: false,
+            selectedIndexes: {
+                0: false,
+                1: false,
+                2: false,
+                3: false,
+                4: false,
+                5: false,
+                6: false
+            },
+            swiperOptions: {
+                loop: true,
+                slidesPerView: 3,
+                pagination: {
+                    el: '.swiper-pagination'
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                }
+            }
         },
+
         methods: {
+            onSwiperClickSlide(index, reallyIndex) {
+                this.selectedIndexes[reallyIndex] = !this.selectedIndexes[reallyIndex]
+            },
             calculateSectionOffsets() {
                 let sections = document.getElementsByTagName('section');
                 let length = sections.length;
@@ -144,6 +248,11 @@
                 }
 
             },
+
+            showFilter(e) {
+                this.isFilterActive = !this.isFilterActive;
+            },
+
             handleMouseWheel: function (e) {
 
                 if (e.wheelDelta < 30 && !this.inMove) {
@@ -168,6 +277,7 @@
             moveDown() {
                 this.inMove = true;
                 this.activeSection--;
+                this.isFilterActive = false;
 
                 if (this.activeSection < 0) this.activeSection = this.offsets.length - 1;
 
@@ -176,6 +286,7 @@
             moveUp() {
                 this.inMove = true;
                 this.activeSection++;
+                this.isFilterActive = false;
 
                 if (this.activeSection > this.offsets.length - 1) this.activeSection = 0;
 
